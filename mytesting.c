@@ -51,32 +51,6 @@ int cost_function() {
   return 0;
 }
 */
-int even_odd_function() {
-  int num;
-    printf("Enter an integer: ");
-    scanf("%d", &num);
-
-    if(num % 2 == 0)
-        printf("%d is even. \n", num);
-    else
-        printf("%d is odd. \n", num);
-
-    return 0;
-}
-
-int time_function() {
-  int time;
-  printf("What time is it?");
-  scanf("%i", &time);
-
-  if (time < 12) 
-      printf("It is the morning\n");
-   else if (time > 12) 
-       printf("It is the evening\n");
-   else 
-       printf("You wrote it wrong\n");
-  return 0;
-}
 
 int main() { 
   for (int i = 0; i < 10; i++) {
@@ -107,6 +81,33 @@ switch (day) {
   case 7:
     printf("Sunday");
     break;
+}
+int even_odd_function() {
+  int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0)
+        printf("%d is even. \n", num);
+    else
+        printf("%d is odd. \n", num);
+
+    return 0;
+}
+
+int time_function() {
+  int time;
+  printf("What time is it?");
+  scanf("%i", &time);
+
+  if (time < 12) 
+      printf("It is the morning\n");
+   else if (time > 12) 
+       printf("It is the evening\n");
+   else 
+       printf("You wrote it wrong\n");
+  return 0;
+}
 }
 
 
