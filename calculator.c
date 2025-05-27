@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
+// run by doing gcc calc.c -o code -lm
+// fix identification for exponents
 int main() {
     char operation[20];
     char operator;
@@ -11,12 +12,13 @@ int main() {
     int number1, number2;
     int result;
 
-    printf("Enter the type of operation: A for Arithmetic, T for Trigonometry, G for Graphing\n");
+    printf("Enter the type of operation: A for Arithmetic, T for Trigonometry, G for Graphing, E for exponents\n");
     scanf("%s", operation);
 
-    // Convert first character to uppercase to simplify checking
-    char opType = toupper(operation[0]);
+    // make the result for division take into account for decimal answers
 
+    // Convert first character to uppercase
+    char opType = toupper(operation[0]);
     if (opType == 'A') {
         // Arithmetic
         printf("Enter two numbers: ");
@@ -28,14 +30,14 @@ int main() {
         switch (operator) {
             case '+':
                 result = number1 + number2;
-                break;
+                break; 
             case '-':
                 result = number1 - number2;
                 break;
             case 'X':
             case 'x':
             case '*':
-                result = number1 * number2;
+                    result = number1 * number2;
                 break;
             case '/':
                 if (number2 != 0) {
@@ -87,4 +89,15 @@ int main() {
     }
 
     return 0;
+
+    if (opType == 'E') {
+        double base;
+        double exponent;
+        double result = pow(base, exponent);
+        printf("Give me the number and the exponent of that number");
+        scanf("%lf %lf", &base, &exponent);
+
+        printf("%.2lf raised to the power of %.2lf is %.2lf", base, exponent, result);
+        return 0;
+    }
 }

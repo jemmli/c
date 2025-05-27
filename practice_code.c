@@ -15,7 +15,10 @@ int main() {
     }
     // you could also put the code in the do statement beside the while statement and it will still work like this
     // while (number < 50) {printf("%i\n", number); number++;}
-    while (number < 50);
+    while (number < 50) {
+        printf("%i\n", number); 
+        number+++;
+    }
 
 // for loop example
 // you have to identify the variable as an integer, variable, character, float, etc before using for. 
